@@ -12,14 +12,12 @@
 </script>
 
 </head>
-<body >
+<body onload="document.forms[0].submit()">
 Missile Man takes off!
 
-<div id="test" onload="alert(5)">
-<form action="csrf" name="testCsrf" onload="alert(1)">
-	<input type="text" name="name" value="csrf Unleashe">
+<form action="/painTest/restricted/csrf" name="testCsrf" method="post">
+	<input type="text" name="name" value="csrf Unleashedd">
 	<input type="submit" >
 </form>
-</div>
 </body>
 </html>

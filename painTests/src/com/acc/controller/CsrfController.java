@@ -18,16 +18,35 @@ public class CsrfController extends HttpServlet
 	{
 		String input = (String) request.getParameter("name");
 		String timeStamp = (String) request.getParameter("timeStamp");
-		System.out.println("user input - " + input);
+		System.out.println("user input Get- " + input);
 		System.out.println("session creation time - " + timeStamp);
 
 		if (timeStamp == null)
 		{
-			System.out.println("CSRF detected...");
+			System.out.println("CSRF detected....");
 			request.setAttribute("errorMessage", "CSRF Detected");
 		}
 		RequestDispatcher rd = request
 					.getRequestDispatcher("/WEB-INF/views/csrfResult.jsp");
 		rd.forward(request, response);
 	}
+	
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException,
+			IOException
+			{
+		String input = (String) request.getParameter("name");
+		String timeStamp = (String) request.getParameter("timeStamp");
+		System.out.println("user input Post - " + input);
+		System.out.println("session creation time - " + timeStamp);
+		
+		if (timeStamp == null)
+		{
+			System.out.println("CSRF detected...");
+			request.setAttribute("errorMessage", "CSRF Detected");
+		}
+		RequestDispatcher rd = request
+				.getRequestDispatcher("/WEB-INF/views/csrfResult.jsp");
+		rd.forward(request, response);
+			}
 }

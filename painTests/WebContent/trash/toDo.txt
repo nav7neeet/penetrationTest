@@ -24,6 +24,14 @@
 
 13. Captcha
 
+14. Dos attack
+
+15. Dos attack detection and prevention
+
+16. Restrict multiple loginss
+
+
+
 ====================================================================
 Git - sr37s9
 
