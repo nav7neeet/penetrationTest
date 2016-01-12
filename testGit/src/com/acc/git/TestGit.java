@@ -15,6 +15,8 @@ public class TestGit extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException
 {
 		System.out.println("Hello check 1");
+		System.out.println("Hello check 1");
+		System.out.println("Hello check 1");
 }
 
 	protected void doPost(HttpServletRequest request,
