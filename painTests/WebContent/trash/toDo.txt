@@ -8,17 +8,17 @@
 
 5. Place holders in jsp or java
 
-6. Test HTTP methods like trace, delete
+6. Test HTTP methods like trace, delete - getting method not allowed. ok then allow these methods
 
-7. Command line tool firebug
+7. Command line tool firebug - in progress
 
-8. HTTP strict transport security header
+8. HTTP strict transport security header -  in progress
 
-9. CSRF, modifying host, referrer header
+9. CSRF, modifying host, referrer header - clear
 
-10. Suppressing server version in header
+10. Suppressing server version in header - clear
 
-11. Cross Frame scripting
+11. Cross Frame scripting - clear
 
 12. Storing password hashes in database and authentication against hashes.
 
@@ -28,7 +28,19 @@
 
 15. Dos attack detection and prevention
 
-16. Restrict multiple loginss
+16. Restrict multiple logins
+
+17. Binding session ids with browser instance
+
+18. Use OWASP libraries for CSRF, XSS
+
+19. Anti XSS header like the one google has 
+
+20. bypass csrf controls using xss  - ho jayega yaar, no tension
+
+21. server sends tampered cookies. how to get correct cookie back from server - check what google does.
+
+22. Implement single sign on
 
 
 

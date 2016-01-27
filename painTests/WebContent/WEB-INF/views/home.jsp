@@ -11,6 +11,7 @@
 <a href="/painTest/restricted/testCsrf">CSRF</a><br>
 <a href="/painTest/restricted/setInsecureCookies">Cookie Stealing</a><br>
 <a href="/painTest/restricted/iframe">Click Jacking</a><br>
+<a href="/painTest/restricted/admin">Role based authorisation</a><br>
 
 </body>
 </html>
