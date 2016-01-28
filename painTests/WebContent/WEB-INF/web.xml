@@ -93,6 +93,7 @@
 				<auth-constraint>
 						<role-name>user</role-name>
 						<role-name>admin</role-name>
+						<role-name>root</role-name>
 				</auth-constraint>
 		</security-constraint>
 
