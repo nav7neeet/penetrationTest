@@ -16,6 +16,7 @@ public class AdminController extends HttpServlet
 			HttpServletResponse response) throws ServletException,
 			IOException
 	{
+		System.out.println("hehehehehehhe");
 		RequestDispatcher rd = request
 				.getRequestDispatcher("/WEB-INF/views/admin.jsp");
 		rd.forward(request, response);

@@ -17,30 +17,32 @@ public class CsrfController extends HttpServlet
 			IOException
 	{
 		String input = (String) request.getParameter("name");
-		String timeStamp = (String) request.getParameter("timeStamp");
+		String antiCSRFToken = (String) request
+				.getParameter("antiCSRFToken");
 		System.out.println("user input Get- " + input);
-		System.out.println("session creation time - " + timeStamp);
+		System.out.println("session creation time - " + antiCSRFToken);
 
-		if (timeStamp == null)
+		if (antiCSRFToken == null)
 		{
 			System.out.println("CSRF detected....");
 			request.setAttribute("errorMessage", "CSRF Detected");
 		}
 		RequestDispatcher rd = request
-					.getRequestDispatcher("/WEB-INF/views/csrfResult.jsp");
+				.getRequestDispatcher("/WEB-INF/views/csrfResult.jsp");
 		rd.forward(request, response);
 	}
-	
+
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException,
 			IOException
-			{
+	{
 		String input = (String) request.getParameter("name");
-		String timeStamp = (String) request.getParameter("timeStamp");
+		String antiCSRFToken = (String) request
+				.getParameter("antiCSRFToken");
 		System.out.println("user input Post - " + input);
-		System.out.println("session creation time - " + timeStamp);
-		
-		if (timeStamp == null)
+		System.out.println("session creation time - " + antiCSRFToken);
+
+		if (antiCSRFToken == null)
 		{
 			System.out.println("CSRF detected...");
 			request.setAttribute("errorMessage", "CSRF Detected");
@@ -48,5 +50,5 @@ public class CsrfController extends HttpServlet
 		RequestDispatcher rd = request
 				.getRequestDispatcher("/WEB-INF/views/csrfResult.jsp");
 		rd.forward(request, response);
-			}
+	}
 }

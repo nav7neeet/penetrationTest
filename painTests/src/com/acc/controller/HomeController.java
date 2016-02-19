@@ -15,21 +15,24 @@ import javax.servlet.http.HttpSession;
  * Handles requests for the application home page.
  */
 @WebServlet(urlPatterns = { "/restricted/home", "/public/home" })
-public class HomeController extends HttpServlet {
+public class HomeController extends HttpServlet
+{
 	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException
+			HttpServletResponse response) throws ServletException,
+			IOException
 	{
 		String remoteAddr = request.getRemoteAddr();
 
 		String username = "";
 		Principal principal = request.getUserPrincipal();
-		if (principal != null) 
+		if (principal != null)
 		{
 			username = principal.getName(); // Find User by j_username.
 		}
 
 		System.out.println("HomeController..." + username);
 		System.out.println("HomeController..." + remoteAddr);
+		response.addHeader("Strict-Transport-Security", "max-age=31536000");
 
 		// Dude invalidate the session before creating a new session else it
 		// will lead session fixation attacks, hehe...got that bro..

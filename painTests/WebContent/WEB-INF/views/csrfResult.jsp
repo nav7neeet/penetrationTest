@@ -9,15 +9,13 @@
 <% String errorMessage= (String)request.getAttribute("errorMessage"); 
 	if(errorMessage==null)
 	{
-		out.print("No csrf man!");
+		out.print("No csrf detected!, Account recovery email updated successfully in the DB");
 	}
 	else
 	{
-		out.println("Dude its csrf");
+		out.println("Csrf detected!, Account recovery email NOT updated in the DB");
 	}
 %>
-
-
 
 </body>
 </html>

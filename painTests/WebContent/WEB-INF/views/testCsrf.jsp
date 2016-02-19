@@ -6,9 +6,9 @@
 </head>
 <body>
 		<h3> Demystify CSRF</h3>
-		<form action="csrf" method="post">
-				Input - <input type="text" name="name" > <input type="submit">
-				<input type="hidden" name="timeStamp" value="<%= session.getCreationTime()%>">
+		<form action="csrf" method="get">
+				Email - <input type="text" name="email" > <input type="submit" value="update email">
+				<input type="hidden" name="antiCSRFToken" value="<%= session.getCreationTime()%>">
 		</form>
 		
 </body>
